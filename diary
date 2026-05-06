@@ -5,38 +5,38 @@ Part 1: m=20, n=20...
 Part 1: m=20, n=10...
 Part 2: Known global minimum tests...
   m=10, n=10:
-    start 1: residual=0.00e+00
-    start 2: residual=1.14e-13
-    start 3: residual=0.00e+00
-    start 4: residual=1.14e-13
+    start 1: residual=1.14e-13
+    start 2: residual=0.00e+00
+    start 3: residual=-5.68e-14
+    start 4: residual=5.68e-13
   m=10, n=5:
-    start 1: residual=0.00e+00
-    start 2: residual=-1.14e-13
-    start 3: residual=-1.14e-13
+    start 1: residual=-2.27e-13
+    start 2: residual=5.68e-14
+    start 3: residual=-5.68e-14
     start 4: residual=-5.68e-14
   m=20, n=20:
     start 1: residual=-2.73e-12
     start 2: residual=-2.96e-12
-    start 3: residual=-2.96e-12
-    start 4: residual=-2.96e-12
+    start 3: residual=-3.18e-12
+    start 4: residual=-3.41e-12
   m=20, n=10:
-    start 1: residual=3.41e-13
-    start 2: residual=4.55e-13
+    start 1: residual=4.55e-13
+    start 2: residual=2.27e-13
     start 3: residual=5.68e-13
-    start 4: residual=1.25e-12
+    start 4: residual=2.61e-12
 Part 3: Ruhe comparison...
   m=5...
-    NPP:  res=8.6497, time=0.057s
-    Ruhe: res=57.8703, time=0.355s
+    NPP:  res=8.6497, time=0.090s
+    Ruhe: res=57.8703, time=0.434s
   m=10...
-    NPP:  res=50.9699, time=0.180s
-    Ruhe: res=213.4013, time=1.264s
+    NPP:  res=50.9699, time=0.155s
+    Ruhe: res=213.4013, time=1.143s
   m=15...
-    NPP:  res=106.6803, time=0.468s
-    Ruhe: res=443.9862, time=2.864s
+    NPP:  res=106.6803, time=0.390s
+    Ruhe: res=443.9862, time=2.642s
   m=20...
-    NPP:  res=158.8295, time=0.488s
-    Ruhe: res=700.7289, time=5.568s
+    NPP:  res=158.8295, time=0.383s
+    Ruhe: res=700.7289, time=7.819s
 Saved fig1_convergence.png
 Saved fig2_known_min.png
 Saved fig3_ruhe.png
@@ -51,9 +51,9 @@ Complex Gaussian inputs. Results averaged over 3 trials.
 
 m      n      Residual       Time(s)      Grad norm    Norm err    
 ----------------------------------------------------------------
-10     10     60.5110        0.414        1.70e-07     3.91e-15    
-10     5      5.7805         1.252        2.89e-07     1.41e-14    
-20     20     223.5632       1.964        4.48e-09     1.38e-14    
-20     10     15.2493        23.420       6.40e-07     2.46e-14    
+10     10     60.5110        0.848        1.70e-07     4.02e-15    
+10     5      5.7805         1.359        7.23e-08     1.44e-14    
+20     20     223.5632       2.269        6.11e-09     1.41e-14    
+20     10     15.2493        24.485       4.33e-07     2.06e-14    
 
 All figures saved as PNG in current directory.
