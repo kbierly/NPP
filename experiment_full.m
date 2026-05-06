@@ -174,7 +174,6 @@ fprintf('Saved fig1_convergence.png\n');
 
 %% Figure 2: Known global minimum recovery -- convergence trajectories only
 % True residual = 0, so curves converging to ~0 confirm global min found.
-% Curves plateauing above 0 confirm local minima.
 start_colors2 = lines(num_starts);
 num_configs   = length(sizes) * length(n_ratios);
 figure('Name','Figure 2','Position',[100 100 1000 400]);

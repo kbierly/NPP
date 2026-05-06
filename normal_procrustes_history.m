@@ -86,63 +86,42 @@ function val = f(U, X, Y)
 end
 
 function G = euclidean_grad(U, X, Y)
-% Euclidean gradient of f at U
     if isstruct(U), U = U.U; end
     UX = U' * X;
     UY = U' * Y;
-    m = size(UX, 1);
-    phi = zeros(m, 1);
-    lambda = zeros(m, 1);
+    m  = size(UX, 1);
+    d  = zeros(m, 1);
     for i = 1:m
-        phi(i) = norm(UX(i,:))^2;
-        if phi(i) > 0
-            lambda(i) = UY(i,:) * UX(i,:)';
+        phi_i = norm(UX(i,:))^2;
+        if phi_i > 0
+            d(i) = UX(i,:) * UY(i,:)' / phi_i;  % d_i* = (U*X)_i(U*Y)_i* / phi_i
         end
     end
-    phi_inv = zeros(m, 1);
-    phi_inv2 = zeros(m, 1);
-    for i = 1:m
-        if phi(i) > 0
-            phi_inv(i) = 1 / phi(i);
-            phi_inv2(i) = 1 / phi(i)^2;
-        end
-    end
-    Phi_inv     = diag(phi_inv);
-    Phi_inv2    = diag(phi_inv2);
-    Lambda      = diag(lambda);
-    Lambda_conj = diag(conj(lambda));
-    Lambda_abs2 = diag(abs(lambda).^2);
-    G = 2 * (X*Y'*U*Lambda*Phi_inv + Y*X'*U*Lambda_conj*Phi_inv - X*X'*U*Lambda_abs2*Phi_inv2);
+    Dstar      = diag(d);
+    Dstar_conj = diag(conj(d));   % (D*)*
+    Dstar_abs2 = diag(abs(d).^2); % |D*|^2
+    % grad = 2( XY* U (D*)* + YX* U D* - XX* U |D*|^2 )
+    G = 2 * (X*Y'*U*Dstar_conj + Y*X'*U*Dstar - X*X'*U*Dstar_abs2);
 end
 
 function H = euclidean_hess(U, W, X, Y, M)
-% Euclidean Hessian-vector product of f at U in direction W
     if isstruct(U), U = U.U; end
-    W = M.tangent2ambient(U, W);
+    W  = M.tangent2ambient(U, W);
     UX = U' * X;  UY = U' * Y;
     WX = W' * X;  WY = W' * Y;
-    m = size(UX, 1);
-    phi = zeros(m, 1);
+    m  = size(UX, 1);
+
+    phi    = zeros(m, 1);
     lambda = zeros(m, 1);
+    d      = zeros(m, 1);
     for i = 1:m
         phi(i) = norm(UX(i,:))^2;
         if phi(i) > 0
-            lambda(i) = UY(i,:) * UX(i,:)';
+            lambda(i) = UY(i,:) * UX(i,:)';       % Lambda_ii = (U*Y)_i(U*X)_i*
+            d(i)      = conj(lambda(i)) / phi(i);  % d_i* = Lambda_ii* / phi_i
         end
     end
-    phi_inv = zeros(m, 1);
-    phi_inv2 = zeros(m, 1);
-    for i = 1:m
-        if phi(i) > 0
-            phi_inv(i) = 1 / phi(i);
-            phi_inv2(i) = 1 / phi(i)^2;
-        end
-    end
-    Phi_inv     = diag(phi_inv);
-    Phi_inv2    = diag(phi_inv2);
-    Lambda      = diag(lambda);
-    Lambda_conj = diag(conj(lambda));
-    Lambda_abs2 = diag(abs(lambda).^2);
+
     delta_lambda = zeros(m, 1);
     delta_phi    = zeros(m, 1);
     for i = 1:m
@@ -151,17 +130,32 @@ function H = euclidean_hess(U, W, X, Y, M)
             delta_phi(i)    = 2*real(UX(i,:)*WX(i,:)');
         end
     end
-    dLambda      = diag(delta_lambda);
-    dLambda_conj = diag(conj(delta_lambda));
-    dPhi         = diag(delta_phi);
-    dLambda_abs2 = dLambda*Lambda_conj + Lambda*dLambda_conj;
-    dPhi_inv     = -Phi_inv  * dPhi * Phi_inv;
-    dPhi_inv2    = -Phi_inv  * dPhi * Phi_inv2 - Phi_inv2 * dPhi * Phi_inv;
+
+    % delta(d_i*) = conj(delta_lambda_i)/phi_i - conj(lambda_i)/phi_i^2 * delta_phi_i
+    delta_d = zeros(m, 1);
+    for i = 1:m
+        if phi(i) > 0
+            delta_d(i) = conj(delta_lambda(i)) / phi(i) ...
+                       - conj(lambda(i)) / phi(i)^2 * delta_phi(i);
+        end
+    end
+
+    Dstar      = diag(d);
+    Dstar_conj = diag(conj(d));
+    Dstar_abs2 = diag(abs(d).^2);
+
+    dDstar      = diag(delta_d);
+    dDstar_conj = diag(conj(delta_d));
+    % delta(|D*|^2) = delta(D*)(D*)* + D* delta(D*)*
+    dDstar_abs2 = dDstar*Dstar_conj + Dstar*dDstar_conj;
+
+    % Hess = 2( XY* W (D*)* + XY* U delta(D*)*
+    %         + YX* W D*    + YX* U delta(D*)
+    %         - XX* W |D*|^2 - XX* U delta(|D*|^2) )
     H = 2 * ( ...
-        X*Y'*W*Lambda*Phi_inv      + X*Y'*U*dLambda*Phi_inv      + X*Y'*U*Lambda*dPhi_inv      + ...
-        Y*X'*W*Lambda_conj*Phi_inv + Y*X'*U*dLambda_conj*Phi_inv + Y*X'*U*Lambda_conj*dPhi_inv - ...
-        X*X'*W*Lambda_abs2*Phi_inv2 - X*X'*U*dLambda_abs2*Phi_inv2 - X*X'*U*Lambda_abs2*dPhi_inv2 ...
-    );
+        X*Y'*W*Dstar_conj  + X*Y'*U*dDstar_conj  + ...
+        Y*X'*W*Dstar       + Y*X'*U*dDstar        - ...
+        X*X'*W*Dstar_abs2  - X*X'*U*dDstar_abs2 );
 end
 
 function S = skew(X)
