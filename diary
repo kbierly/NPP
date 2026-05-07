@@ -26,17 +26,17 @@ Part 2: Known global minimum tests...
     start 4: residual=2.61e-12
 Part 3: Ruhe comparison...
   m=5...
-    NPP:  res=8.6497, time=0.090s
-    Ruhe: res=57.8703, time=0.434s
+    NPP:  res=8.6497, time=0.103s
+    Ruhe: res=57.8703, time=0.503s
   m=10...
-    NPP:  res=50.9699, time=0.155s
-    Ruhe: res=213.4013, time=1.143s
+    NPP:  res=50.9699, time=0.186s
+    Ruhe: res=213.4013, time=1.320s
   m=15...
-    NPP:  res=106.6803, time=0.390s
-    Ruhe: res=443.9862, time=2.642s
+    NPP:  res=106.6803, time=0.489s
+    Ruhe: res=443.9862, time=3.045s
   m=20...
-    NPP:  res=158.8295, time=0.383s
-    Ruhe: res=700.7289, time=7.819s
+    NPP:  res=158.8295, time=0.503s
+    Ruhe: res=700.7289, time=6.528s
 Saved fig1_convergence.png
 Saved fig2_known_min.png
 Saved fig3_ruhe.png
@@ -51,9 +51,101 @@ Complex Gaussian inputs. Results averaged over 3 trials.
 
 m      n      Residual       Time(s)      Grad norm    Norm err    
 ----------------------------------------------------------------
-10     10     60.5110        0.848        1.70e-07     4.02e-15    
-10     5      5.7805         1.359        7.23e-08     1.44e-14    
-20     20     223.5632       2.269        6.11e-09     1.41e-14    
-20     10     15.2493        24.485       4.33e-07     2.06e-14    
+10     10     60.5110        1.508        1.70e-07     4.51e-15    
+10     5      5.7805         1.630        7.23e-08     1.38e-14    
+20     20     223.5632       2.402        6.11e-09     1.28e-14    
+20     10     15.2493        18.338       4.33e-07     2.07e-14    
 
 All figures saved as PNG in current directory.
+
+Real Version
+
+real_experiment_full
+Part 1: m=10, n=10...
+Part 1: m=10, n=5...
+Part 1: m=20, n=20...
+Part 1: m=20, n=10...
+
+Part 2: Known global minimum tests...
+  m=10, n=10:
+    start 1: residual=-1.14e-13,  ||(A_rec-A_true)X||=1.54e-09  (MATCH)
+    start 2: residual=-5.68e-14,  ||(A_rec-A_true)X||=5.53e-09  (MATCH)
+    start 3: residual=-5.68e-14,  ||(A_rec-A_true)X||=1.57e-12  (MATCH)
+    start 4: residual=2.84e-14,  ||(A_rec-A_true)X||=1.36e-09  (MATCH)
+
+  m=10, n=5:
+    start 1: residual=6.21e-11,  ||(A_rec-A_true)X||=7.88e-06  (MATCH)
+    start 2: residual=1.64e-04,  ||(A_rec-A_true)X||=1.28e-02  (differ)
+    start 3: residual=7.80e-11,  ||(A_rec-A_true)X||=8.83e-06  (MATCH)
+    start 4: residual=1.54e-10,  ||(A_rec-A_true)X||=1.24e-05  (differ)
+
+  m=20, n=20:
+    start 1: residual=3.41e-13,  ||(A_rec-A_true)X||=1.34e-08  (MATCH)
+    start 2: residual=3.41e-13,  ||(A_rec-A_true)X||=1.97e-08  (MATCH)
+    start 3: residual=5.68e-13,  ||(A_rec-A_true)X||=8.70e-09  (MATCH)
+    start 4: residual=2.27e-13,  ||(A_rec-A_true)X||=1.13e-13  (MATCH)
+
+  m=20, n=10:
+    start 1: residual=5.00e-05,  ||(A_rec-A_true)X||=7.07e-03  (differ)
+    start 2: residual=2.41e-04,  ||(A_rec-A_true)X||=1.55e-02  (differ)
+    start 3: residual=6.80e-10,  ||(A_rec-A_true)X||=2.61e-05  (differ)
+    start 4: residual=4.63e-05,  ||(A_rec-A_true)X||=6.80e-03  (differ)
+
+--- Detailed printout: 5x5 ---
+  start 1: residual=8.66e-01,  ||(A_rec-A_true)X||_F=9.31e-01
+  start 2: residual=8.66e-01,  ||(A_rec-A_true)X||_F=9.31e-01
+  start 3: residual=-5.68e-14,  ||(A_rec-A_true)X||_F=5.23e-13
+  start 4: residual=-2.84e-14,  ||(A_rec-A_true)X||_F=2.59e-09
+  A_true eigenvalues: -0.3322+0.0000i  -0.0095-0.5373i  -0.0095+0.5373i  1.8821-1.3897i  1.8821+1.3897i  
+  A_best eigenvalues: -0.3322+0.0000i  -0.0095-0.5373i  -0.0095+0.5373i  1.8821-1.3897i  1.8821+1.3897i  
+  ||(A_best-A_true)X||_F = 5.23e-13  (should be ~0)
+  ||A_best - A_true||_F  = 4.91e-13  (non-identifiable for n<m)
+  Normality err of A_best: 1.53e-15
+
+--- Detailed printout: 10x5 ---
+  start 1: residual=2.84e-13,  ||(A_rec-A_true)X||_F=4.97e-07
+  start 2: residual=2.27e-11,  ||(A_rec-A_true)X||_F=4.76e-06
+  start 3: residual=1.99e-13,  ||(A_rec-A_true)X||_F=4.17e-07
+  start 4: residual=4.55e-13,  ||(A_rec-A_true)X||_F=6.33e-07
+  A_true eigenvalues: -2.2060-0.9880i  -2.2060+0.9880i  -1.3509-0.9418i  -1.3509+0.9418i  0.2325-1.1324i  0.2325+1.1324i  0.4376-1.3095i  0.4376+1.3095i  0.7066-1.0466i  0.7066+1.0466i  
+  A_best eigenvalues: -2.2813-0.5641i  -2.2813+0.5641i  -1.5822-0.3254i  -1.5822+0.3254i  -0.1459-1.4589i  -0.1459+1.4589i  0.5193-1.5735i  0.5193+1.5735i  0.8482-0.1273i  0.8482+0.1273i  
+  ||(A_best-A_true)X||_F = 4.17e-07  (should be ~0)
+  ||A_best - A_true||_F  = 5.43e+00  (non-identifiable for n<m)
+  Normality err of A_best: 4.37e-15
+
+Part 3: Guglielmi-Scalone comparison (X=I, real Gaussian)...
+  m=5...
+    NPP: res=10.4022, time=0.086s,  norm_err=8.01e-15
+    GS:  res=19.1389, time=1.593s,  norm_err=1.14e-08
+
+  --- 5x5 detailed comparison ---
+  NPP eigenvalues:   -1.1880-1.3892i  -1.1880+1.3892i  -0.8936+0.0000i  2.4675-1.2030i  2.4675+1.2030i  
+  GS  eigenvalues:   0.0011+0.0000i  0.0012+0.0000i  0.6329-0.0000i  0.6329+0.0000i  3.8079+0.0000i  
+  NPP normality err: 8.01e-15
+  GS  normality err: 1.14e-08
+  NPP ||A-Y||_F^2:   9.6036
+  GS  ||A-Y||_F^2:   19.1389
+  m=10...
+    NPP: res=25.3106, time=0.142s,  norm_err=1.18e-14
+    GS:  res=88.9748, time=1.499s,  norm_err=3.36e-09
+  m=15...
+    NPP: res=56.4971, time=0.285s,  norm_err=3.37e-14
+    GS:  res=156.7777, time=2.654s,  norm_err=2.46e-08
+  m=20...
+    NPP: res=91.5016, time=0.330s,  norm_err=5.15e-14
+    GS:  res=310.6060, time=14.888s,  norm_err=4.18e-07
+Saved fig1_real_convergence.png
+Saved fig2_real_known_min.png
+Saved fig3_real_gs.png
+
+========== Summary Table (Real NPP) ==========
+Real Gaussian inputs. Results averaged over 3 trials.
+
+m      n      Residual       Time(s)      Grad norm    Norm err    
+----------------------------------------------------------------
+10     10     43.9911        0.233        2.47e-07     2.92e-15    
+10     5      2.4659         2.321        5.64e-07     3.92e-13    
+20     20     130.5837       0.690        1.06e-09     9.78e-15    
+20     10     14.7630        7.291        4.68e-07     2.34e-14    
+
+All figures saved.
