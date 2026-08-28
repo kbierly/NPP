@@ -10,7 +10,8 @@ function realcnp_comparison()
 % Scalone's real gradient-flow method is run for comparison. Only G&S Example 1
 % prints its recovered matrices; all other cases print scalar diagnostics only.
 %
-% Requires Manopt (https://www.manopt.org) on the path.
+% Requires Manopt (https://www.manopt.org) on the path, and the
+% Guglielmi-Scalone implementation; see README.
 
     rng(0);
 
@@ -341,119 +342,13 @@ function H = npp_hess(Q, W, Y, M)
 end
 
 % =====================================================================
-%  Method 2: Guglielmi & Scalone (their real code)
+%  Method 2: Guglielmi & Scalone
+%
+%  Redacted. Requires the Guglielmi-Scalone implementation, see README.
 % =====================================================================
 
 function [B, k, hist] = gs_solve(Y)
-    n   = size(Y,1);
-    tol = 1e-16;
-    eps0 = 0.01;
-    eps1 = max(9, norm(Y,'fro'));   % widen bracket for large eps*
-    [B, k, hist] = secanti(eps0, eps1, Y, n, tol);
-end
-
-function [B, k, hist] = secanti(eps0, eps1, A, n, tol)
-    hmin = 1e-4;
-    nmax = 10000;
-    E0   = zeros(n, n);
-    epsv = 0.1;
-    k    = 1;
-    eps_lb = eps0;
-    eps_ub = eps1;
-    eps_hat = eps_lb;
-    B = A;
-    tl = []; rl = [];
-    t0 = tic;
-    while abs(eps_lb - eps_ub) > 1e-7
-        [~, ~, B, ~, df]     = normality_real(A, n, hmin, tol, epsv(k), nmax, E0);
-        der = df;
-        tl(end+1,1) = toc(t0);
-        rl(end+1,1) = norm(B - A, 'fro')^2;   % ||A+eps*E - A||_F^2
-        if norm(B - A, 'fro') > 1e-12
-            E0 = (B - A) / norm(B - A, 'fro');
-        else
-            E0 = randn(n) / norm(randn(n), 'fro');
-        end
-        [~, ~, ~, ~, df_hat] = normality_real(A, n, hmin, tol, eps_hat, nmax, E0);
-        if abs(der - df_hat) > 1e-15
-            coeff = (epsv(k) - eps_hat) / (der - df_hat);
-            epsv(k+1) = epsv(k) - coeff * der;
-        else
-            epsv(k+1) = (eps_lb + eps_ub) / 2;
-        end
-        if der < -4e-7
-            eps_hat = eps_lb;  eps_lb = max(eps_lb, epsv(k));
-        else
-            eps_hat = eps_ub;  eps_ub = min(eps_ub, epsv(k));
-        end
-        if epsv(k+1) > eps_ub || epsv(k+1) < eps_lb
-            epsv(k+1) = (eps_lb + eps_ub) / 2;
-        end
-        k = k + 1;
-        if k > 100, break; end
-    end
-    if isempty(tl)
-        hist.time = 0; hist.residual = norm(B-A,'fro')^2;
-    else
-        hist.time = tl - tl(1); hist.residual = rl;
-    end
-end
-
-function [f1, iter, B, G, df] = normality_real(A, n, hmin, tol, eps, nmax, E0)
-    P = ones(n, n);      % empty pattern (plain CNP)
-    iter = 0;  h = 3;  hmax = 5;  G = zeros(n,n);  df = 0;
-    if norm(E0, 'fro') > 0
-        E0 = E0 / norm(E0, 'fro');
-    else
-        E0 = randn(n);  E0 = E0 / norm(E0, 'fro');
-    end
-    B = A + eps * (P .* E0);
-    f0 = departure(B);
-    if abs(f0) < tol || eps < 1e-13
-        G = P .* gradient_G(A, B, n);
-        df = 2 * (eps - norm(G, 'fro'));
-        f1 = f0;  return;
-    end
-    while f0 > tol
-        iter = iter + 1;
-        B = A + eps * (P .* E0);
-        G = P .* gradient_G(A, B, n);
-        df = 2 * (eps - norm(G, 'fro'));
-        Edot = -P .* real(G + trace(E0' * G) * E0);
-        E1 = P .* (E0 + h * Edot);
-        E1 = E1 / norm(E1, 'fro');
-        Bnew = A + eps * E1;
-        f1 = departure(Bnew);
-        if f1 < f0
-            if abs(f0 - f1) < 1e-14, B = Bnew; return; end
-            if h < hmax, h = h * 1.2; end
-            E0 = E1;  f0 = f1;  B = Bnew;
-        else
-            if h < hmin, f1 = f0; return; end
-            h = h / 2;
-        end
-        if iter > nmax, f1 = f0; return; end
-    end
-    f1 = f0;
-end
-
-function G = gradient_G(A, B, n)
-    global GS_INNER_ITER_COUNT
-    GS_INNER_ITER_COUNT = GS_INNER_ITER_COUNT + 1;
-    [R, D, L] = eig(B);
-    Lambda = diag(D);
-    g_sum = zeros(n, n);
-    for j = 1:n
-        y = L(:, j) / norm(L(:, j));
-        x = R(:, j) / norm(R(:, j));
-        theta = angle(Lambda(j));
-        beta  = angle(y' * x);
-        alpha = -theta - beta;
-        x_rot = x * exp(1i * alpha);
-        r = abs(y' * x_rot);
-        g_sum = g_sum + (abs(Lambda(j)) / r) * y * x_rot';
-    end
-    G = real(A - g_sum);
+    error('Requires the Guglielmi-Scalone implementation; see README.');
 end
 
 % =====================================================================
