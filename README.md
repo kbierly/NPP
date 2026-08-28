@@ -5,6 +5,9 @@ Minimizes ||AX - Y||_F^2 over normal A by reducing to an optimization over U(m) 
 and running Manopt's trust-region solver. Taking X = I_m gives the Closest Normal Matrix
 Problem.
 
+Note: Guglielmi and Scalone's code for comparison is redacted. Should you wish
+to obtain their implementation, we recommend reaching out to them directly. 
+
 Requires MATLAB and [Manopt](https://www.manopt.org).
 
 `MATLAB-Files/` holds the scripts; each takes no arguments, prints the table numbers, and
