@@ -288,8 +288,7 @@ end
 % =====================================================================
 %  Method 2: Guglielmi & Scalone
 %
-%  Redacted. Requires the Guglielmi-Scalone implementation, available from
-%  the authors; see README.
+%  Redacted. Requires the Guglielmi-Scalone implementation, see README.
 % =====================================================================
 
 function [B, k, hist] = gs_solve(Y)
