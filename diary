@@ -1,0 +1,1162 @@
+complexGradientCheck
+(m,n) = (50,50): slope = 2.00034
+(m,n) = (50,40): slope = 2.00003
+(m,n) = (50,25): slope = 2.00007
+(m,n) = (50,10): slope = 1.99998
+complexHessianCheck
+# Hessian check
+The slope should be 3. It appears to be: 3.00103.
+If it is far from 3, then the gradient or the Hessian might be erroneous.
+Hess f(x)[d] must be a tangent vector at x.
+If so, the following number is zero up to machine precision: 0.
+If it is far from 0, the Hessian returns non-tangent vectors.
+The Hessian at x must be linear on the tangent space at x.
+If so, ||a*H[d1] + b*H[d2] - H[a*d1+b*d2]|| is zero up to machine precision.
+	Value: 6.85166e-14 (norm of H[a*d1+b*d2]: 103.627)
+If it is far from 0, then the Hessian is not linear.
+The Hessian at x must be symmetric on the tangent space at x.
+If so, <d1, H[d2]> - <H[d1], d2> is zero up to machine precision.
+	Value: -1.58355 - -1.58355 = -1.11022e-15.
+If it is far from 0, then the Hessian is not symmetric.
+
+
+!! Special message for this manifold
+
+If all above looks good, great. If not, read on.
+
+For this manifold, tangent vectors are represented
+differently from their ambient space representation.
+In practice, this means that when defining
+v = problem.ehess(x, u), one may need to call
+u = problem.M.tangent2ambient(x, u) first, so as to
+transform u into an ambient vector, if this is more
+convenient. The output of ehess should be an ambient
+vector (it will be transformed to a tangent vector
+automatically).
+
+For more on this concept, see the webpage about rotationsfactory.
+
+# Hessian check
+The slope should be 3. It appears to be: 2.9981.
+If it is far from 3, then the gradient or the Hessian might be erroneous.
+Hess f(x)[d] must be a tangent vector at x.
+If so, the following number is zero up to machine precision: 0.
+If it is far from 0, the Hessian returns non-tangent vectors.
+The Hessian at x must be linear on the tangent space at x.
+If so, ||a*H[d1] + b*H[d2] - H[a*d1+b*d2]|| is zero up to machine precision.
+	Value: 1.6056e-14 (norm of H[a*d1+b*d2]: 24.3918)
+If it is far from 0, then the Hessian is not linear.
+The Hessian at x must be symmetric on the tangent space at x.
+If so, <d1, H[d2]> - <H[d1], d2> is zero up to machine precision.
+	Value: -1.64375 - -1.64375 = -1.33227e-15.
+If it is far from 0, then the Hessian is not symmetric.
+
+
+!! Special message for this manifold
+
+If all above looks good, great. If not, read on.
+
+For this manifold, tangent vectors are represented
+differently from their ambient space representation.
+In practice, this means that when defining
+v = problem.ehess(x, u), one may need to call
+u = problem.M.tangent2ambient(x, u) first, so as to
+transform u into an ambient vector, if this is more
+convenient. The output of ehess should be an ambient
+vector (it will be transformed to a tangent vector
+automatically).
+
+For more on this concept, see the webpage about rotationsfactory.
+
+# Hessian check
+The slope should be 3. It appears to be: 2.99916.
+If it is far from 3, then the gradient or the Hessian might be erroneous.
+Hess f(x)[d] must be a tangent vector at x.
+If so, the following number is zero up to machine precision: 0.
+If it is far from 0, the Hessian returns non-tangent vectors.
+The Hessian at x must be linear on the tangent space at x.
+If so, ||a*H[d1] + b*H[d2] - H[a*d1+b*d2]|| is zero up to machine precision.
+	Value: 3.88661e-14 (norm of H[a*d1+b*d2]: 54.7352)
+If it is far from 0, then the Hessian is not linear.
+The Hessian at x must be symmetric on the tangent space at x.
+If so, <d1, H[d2]> - <H[d1], d2> is zero up to machine precision.
+	Value: 0.429924 - 0.429924 = 2.77556e-16.
+If it is far from 0, then the Hessian is not symmetric.
+
+
+!! Special message for this manifold
+
+If all above looks good, great. If not, read on.
+
+For this manifold, tangent vectors are represented
+differently from their ambient space representation.
+In practice, this means that when defining
+v = problem.ehess(x, u), one may need to call
+u = problem.M.tangent2ambient(x, u) first, so as to
+transform u into an ambient vector, if this is more
+convenient. The output of ehess should be an ambient
+vector (it will be transformed to a tangent vector
+automatically).
+
+For more on this concept, see the webpage about rotationsfactory.
+
+# Hessian check
+The slope should be 3. It appears to be: 3.00077.
+If it is far from 3, then the gradient or the Hessian might be erroneous.
+Hess f(x)[d] must be a tangent vector at x.
+If so, the following number is zero up to machine precision: 0.
+If it is far from 0, the Hessian returns non-tangent vectors.
+The Hessian at x must be linear on the tangent space at x.
+If so, ||a*H[d1] + b*H[d2] - H[a*d1+b*d2]|| is zero up to machine precision.
+	Value: 2.01651e-14 (norm of H[a*d1+b*d2]: 31.4843)
+If it is far from 0, then the Hessian is not linear.
+The Hessian at x must be symmetric on the tangent space at x.
+If so, <d1, H[d2]> - <H[d1], d2> is zero up to machine precision.
+	Value: -1.24215 - -1.24215 = 2.22045e-16.
+If it is far from 0, then the Hessian is not symmetric.
+
+
+!! Special message for this manifold
+
+If all above looks good, great. If not, read on.
+
+For this manifold, tangent vectors are represented
+differently from their ambient space representation.
+In practice, this means that when defining
+v = problem.ehess(x, u), one may need to call
+u = problem.M.tangent2ambient(x, u) first, so as to
+transform u into an ambient vector, if this is more
+convenient. The output of ehess should be an ambient
+vector (it will be transformed to a tangent vector
+automatically).
+
+For more on this concept, see the webpage about rotationsfactory.
+
+complexConvergence
+  Gaussian  m=10 n=2  start 1/3 done (res=0.0000, time=0.24s)
+  Gaussian  m=10 n=2  start 2/3 done (res=-0.0000, time=0.03s)
+  Gaussian  m=10 n=2  start 3/3 done (res=0.0000, time=0.03s)
+  Gaussian  m=10 n=2  max pairwise ||A_i - A_j||_F = 5.834e+00  (rel = 120.2111%)
+  Gaussian  m=10 n=5  start 1/3 done (res=5.9158, time=4.71s)
+  Gaussian  m=10 n=5  start 2/3 done (res=5.9158, time=3.80s)
+  Gaussian  m=10 n=5  start 3/3 done (res=5.9158, time=3.42s)
+  Gaussian  m=10 n=5  max pairwise ||A_i - A_j||_F = 2.028e-03  (rel = 0.0050%)
+  Gaussian  m=10 n=8  start 1/3 done (res=32.2074, time=0.20s)
+  Gaussian  m=10 n=8  start 2/3 done (res=32.3464, time=0.14s)
+  Gaussian  m=10 n=8  start 3/3 done (res=32.2074, time=0.16s)
+  Gaussian  m=10 n=8  max pairwise ||A_i - A_j||_F = 3.455e+00  (rel = 70.8453%)
+  Gaussian  m=10 n=10  start 1/3 done (res=48.2188, time=0.10s)
+  Gaussian  m=10 n=10  start 2/3 done (res=48.2188, time=0.09s)
+  Gaussian  m=10 n=10  start 3/3 done (res=48.2188, time=0.11s)
+  Gaussian  m=10 n=10  max pairwise ||A_i - A_j||_F = 1.783e-08  (rel = 0.0000%)
+  Gaussian  m=20 n=4  start 1/3 done (res=0.0000, time=0.08s)
+  Gaussian  m=20 n=4  start 2/3 done (res=0.0000, time=0.06s)
+  Gaussian  m=20 n=4  start 3/3 done (res=0.0000, time=0.05s)
+  Gaussian  m=20 n=4  max pairwise ||A_i - A_j||_F = 7.383e+00  (rel = 126.2525%)
+  Gaussian  m=20 n=10  start 1/3 done (res=14.2966, time=12.24s)
+  Gaussian  m=20 n=10  start 2/3 done (res=14.2966, time=13.50s)
+  Gaussian  m=20 n=10  start 3/3 done (res=14.2966, time=21.50s)
+  Gaussian  m=20 n=10  max pairwise ||A_i - A_j||_F = 9.547e+00  (rel = 105.8648%)
+  Gaussian  m=20 n=16  start 1/3 done (res=101.9163, time=0.44s)
+  Gaussian  m=20 n=16  start 2/3 done (res=102.9679, time=0.58s)
+  Gaussian  m=20 n=16  start 3/3 done (res=102.4500, time=0.75s)
+  Gaussian  m=20 n=16  max pairwise ||A_i - A_j||_F = 4.470e+00  (rel = 69.4480%)
+  Gaussian  m=20 n=20  start 1/3 done (res=247.9933, time=0.45s)
+  Gaussian  m=20 n=20  start 2/3 done (res=247.9933, time=0.24s)
+  Gaussian  m=20 n=20  start 3/3 done (res=248.4933, time=0.27s)
+  Gaussian  m=20 n=20  max pairwise ||A_i - A_j||_F = 1.478e+00  (rel = 27.2601%)
+  Gaussian  m=50 n=10  start 1/3 done (res=0.0920, time=0.96s)
+  Gaussian  m=50 n=10  start 2/3 done (res=0.0920, time=0.82s)
+  Gaussian  m=50 n=10  start 3/3 done (res=0.0920, time=0.71s)
+  Gaussian  m=50 n=10  max pairwise ||A_i - A_j||_F = 1.226e+01  (rel = 126.3533%)
+  Gaussian  m=50 n=25  start 1/3 done (res=91.5256, time=130.47s)
+  Gaussian  m=50 n=25  start 2/3 done (res=91.5079, time=113.47s)
+  Gaussian  m=50 n=25  start 3/3 done (res=91.5487, time=104.08s)
+  Gaussian  m=50 n=25  max pairwise ||A_i - A_j||_F = 1.999e+01  (rel = 107.3445%)
+  Gaussian  m=50 n=40  start 1/3 done (res=797.2373, time=25.05s)
+  Gaussian  m=50 n=40  start 2/3 done (res=798.5559, time=12.29s)
+  Gaussian  m=50 n=40  start 3/3 done (res=797.1908, time=9.19s)
+  Gaussian  m=50 n=40  max pairwise ||A_i - A_j||_F = 2.426e+01  (rel = 86.8209%)
+  Gaussian  m=50 n=50  start 1/3 done (res=1706.7728, time=5.20s)
+  Gaussian  m=50 n=50  start 2/3 done (res=1709.1607, time=3.69s)
+  Gaussian  m=50 n=50  start 3/3 done (res=1706.6757, time=4.54s)
+  Gaussian  m=50 n=50  max pairwise ||A_i - A_j||_F = 3.902e+00  (rel = 39.0318%)
+
+Best of three random starts (Gaussian inputs)
+m      n      Init res       Residual       Time(s)      Grad norm    Norm err    
+--------------------------------------------------------------------------------
+10     2      9.3570         -0.0000        0.025        2.16e-09     1.88e-15    
+10     5      85.2299        5.9158         4.714        4.22e-07     3.15e-13    
+10     8      131.3117       32.2074        0.165        6.56e-11     2.43e-15    
+10     10     165.9777       48.2188        0.096        5.89e-10     1.85e-15    
+20     4      101.8158       0.0000         0.050        9.82e-09     4.19e-15    
+20     10     312.8349       14.2966        13.496       6.42e-07     1.35e-14    
+20     16     566.8378       101.9163       0.441        5.98e-08     6.08e-15    
+20     20     715.0955       247.9933       0.446        1.14e-12     4.30e-15    
+50     10     943.4263       0.0920         0.957        4.64e-10     1.65e-14    
+50     25     2447.1281      91.5079        113.472      1.60e-07     5.56e-14    
+50     40     3861.5459      797.1908       9.192        6.69e-10     4.24e-14    
+50     50     4952.5709      1706.6757      4.539        3.94e-10     1.60e-14    
+  Uniform  m=10 n=2  start 1/3 done (res=0.0000, time=0.03s)
+  Uniform  m=10 n=2  start 2/3 done (res=0.0000, time=0.03s)
+  Uniform  m=10 n=2  start 3/3 done (res=0.0000, time=0.02s)
+  Uniform  m=10 n=2  max pairwise ||A_i - A_j||_F = 3.736e+00  (rel = 127.2359%)
+  Uniform  m=10 n=5  start 1/3 done (res=0.8254, time=0.21s)
+  Uniform  m=10 n=5  start 2/3 done (res=0.8254, time=0.20s)
+  Uniform  m=10 n=5  start 3/3 done (res=0.8254, time=0.31s)
+  Uniform  m=10 n=5  max pairwise ||A_i - A_j||_F = 4.912e+00  (rel = 88.1243%)
+  Uniform  m=10 n=8  start 1/3 done (res=6.1543, time=0.16s)
+  Uniform  m=10 n=8  start 2/3 done (res=6.1543, time=0.20s)
+  Uniform  m=10 n=8  start 3/3 done (res=6.1543, time=0.25s)
+  Uniform  m=10 n=8  max pairwise ||A_i - A_j||_F = 8.700e-07  (rel = 0.0000%)
+  Uniform  m=10 n=10  start 1/3 done (res=6.6575, time=0.14s)
+  Uniform  m=10 n=10  start 2/3 done (res=6.4930, time=0.20s)
+  Uniform  m=10 n=10  start 3/3 done (res=6.4930, time=0.16s)
+  Uniform  m=10 n=10  max pairwise ||A_i - A_j||_F = 2.709e+00  (rel = 68.6896%)
+  Uniform  m=20 n=4  start 1/3 done (res=0.6396, time=0.13s)
+  Uniform  m=20 n=4  start 2/3 done (res=0.6396, time=0.16s)
+  Uniform  m=20 n=4  start 3/3 done (res=0.6396, time=0.23s)
+  Uniform  m=20 n=4  max pairwise ||A_i - A_j||_F = 1.282e+01  (rel = 106.9857%)
+  Uniform  m=20 n=10  start 1/3 done (res=2.9564, time=7.40s)
+  Uniform  m=20 n=10  start 2/3 done (res=2.9577, time=11.39s)
+  Uniform  m=20 n=10  start 3/3 done (res=2.9570, time=4.90s)
+  Uniform  m=20 n=10  max pairwise ||A_i - A_j||_F = 7.185e+00  (rel = 84.9795%)
+  Uniform  m=20 n=16  start 1/3 done (res=14.4293, time=1.05s)
+  Uniform  m=20 n=16  start 2/3 done (res=14.3199, time=1.78s)
+  Uniform  m=20 n=16  start 3/3 done (res=14.4009, time=1.00s)
+  Uniform  m=20 n=16  max pairwise ||A_i - A_j||_F = 5.317e+00  (rel = 76.3301%)
+  Uniform  m=20 n=20  start 1/3 done (res=20.9860, time=0.90s)
+  Uniform  m=20 n=20  start 2/3 done (res=20.9860, time=0.75s)
+  Uniform  m=20 n=20  start 3/3 done (res=20.9860, time=0.70s)
+  Uniform  m=20 n=20  max pairwise ||A_i - A_j||_F = 2.675e-08  (rel = 0.0000%)
+  Uniform  m=50 n=10  start 1/3 done (res=2.5078, time=1.63s)
+  Uniform  m=50 n=10  start 2/3 done (res=2.5078, time=1.31s)
+  Uniform  m=50 n=10  start 3/3 done (res=2.5078, time=1.21s)
+  Uniform  m=50 n=10  max pairwise ||A_i - A_j||_F = 1.171e+01  (rel = 123.8953%)
+  Uniform  m=50 n=25  start 1/3 done (res=12.5969, time=248.25s)
+  Uniform  m=50 n=25  start 2/3 done (res=12.5875, time=261.87s)
+  Uniform  m=50 n=25  start 3/3 done (res=12.5918, time=175.79s)
+  Uniform  m=50 n=25  max pairwise ||A_i - A_j||_F = 2.088e+01  (rel = 104.0256%)
+  Uniform  m=50 n=40  start 1/3 done (res=76.8583, time=25.35s)
+  Uniform  m=50 n=40  start 2/3 done (res=76.9262, time=14.65s)
+  Uniform  m=50 n=40  start 3/3 done (res=76.9410, time=25.55s)
+  Uniform  m=50 n=40  max pairwise ||A_i - A_j||_F = 5.933e+00  (rel = 40.3534%)
+  Uniform  m=50 n=50  start 1/3 done (res=140.5660, time=14.34s)
+  Uniform  m=50 n=50  start 2/3 done (res=140.5660, time=20.66s)
+  Uniform  m=50 n=50  start 3/3 done (res=140.5983, time=11.44s)
+  Uniform  m=50 n=50  max pairwise ||A_i - A_j||_F = 2.245e+00  (rel = 23.5469%)
+
+Best of three random starts (Uniform inputs)
+m      n      Init res       Residual       Time(s)      Grad norm    Norm err    
+--------------------------------------------------------------------------------
+10     2      0.9007         0.0000         0.029        6.14e-11     1.12e-15    
+10     5      11.0492        0.8254         0.200        8.25e-08     3.78e-15    
+10     8      21.9321        6.1543         0.165        5.81e-09     5.56e-15    
+10     10     26.1097        6.4930         0.164        3.24e-11     5.20e-15    
+20     4      14.7780        0.6396         0.163        2.86e-10     9.37e-15    
+20     10     48.5525        2.9564         7.398        7.93e-07     1.23e-14    
+20     16     80.1577        14.3199        1.776        7.57e-12     9.52e-15    
+20     20     105.2632       20.9860        0.746        2.71e-08     6.71e-15    
+50     10     129.7851       2.5078         1.213        4.00e-08     1.33e-14    
+50     25     313.9784       12.5875        261.872      9.59e-07     3.80e-14    
+50     40     504.7350       76.8583        25.354       7.50e-10     3.29e-14    
+50     50     655.0530       140.5660       14.338       1.36e-09     1.64e-14   
+
+complexKnownMin
+m    n    | init(r1)    init(r2)    | res(r1)     res(r2)     | time(r1)    time(r2)    | dA(r1)      dA(r2)      | relA(r1)%   relA(r2)%   | res spread 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+10   2    | 1.796e+00   1.395e+00   | 1.185e-22   2.695e-16   | 0.660       0.035       | 3.3409      2.6471      | 147.9802    117.2497    | 2.695e-16  
+10   5    | 4.556e+00   7.175e+00   | 3.406e-12   3.996e-12   | 0.438       0.519       | 1.8717      1.7429      | 67.5771     62.9274     | 5.904e-13  
+10   8    | 1.155e+01   8.809e+00   | 1.569e-12   3.644e-12   | 0.681       0.497       | 0.0000      0.0000      | 0.0005      0.0007      | 2.076e-12  
+10   10   | 1.872e+01   1.541e+01   | 3.739e-14   1.424e-14   | 0.290       0.287       | 0.0000      0.0000      | 0.0000      0.0000      | 2.315e-14  
+20   4    | 1.868e+01   1.632e+01   | 2.769e-14   3.596e-16   | 0.067       0.094       | 5.6176      5.4212      | 142.8066    137.8158    | 2.733e-14  
+20   10   | 3.617e+01   3.493e+01   | 5.653e-11   4.508e-11   | 7.417       7.421       | 3.8947      3.3007      | 111.7471    94.7039     | 1.146e-11  
+20   16   | 8.586e+01   7.745e+01   | 4.791e-17   6.214e-15   | 0.918       0.732       | 0.0000      0.0000      | 0.0000      0.0000      | 6.167e-15  
+20   20   | 1.001e+02   9.339e+01   | 6.319e-18   3.313e-14   | 1.311       0.928       | 0.0000      0.0000      | 0.0000      0.0000      | 3.313e-14  
+50   10   | 1.119e+02   1.104e+02   | 5.305e-21   1.924e-23   | 0.757       1.496       | 7.8135      18.9010     | 130.1856    314.9190    | 5.285e-21  
+50   25   | 2.157e+02   2.235e+02   | 8.981e-13   8.789e-13   | 71.991      97.809      | 5.0316      5.0728      | 93.8692     94.6384     | 1.923e-14  
+50   40   | 4.041e+02   4.323e+02   | 5.688e-17   1.980e-15   | 11.797      13.393      | 0.0000      0.0000      | 0.0000      0.0000      | 1.923e-15  
+50   50   | 5.008e+02   5.184e+02   | 2.007e-17   3.049e-22   | 7.911       12.143      | 0.0000      0.0000      | 0.0000      0.0000      | 2.007e-17 
+
+cnp_comparison
+
+==================================================================
+G&S Example 1   (m = 3)
+==================================================================
+nu(Y) = 1.5485,  ||Y||_F = 1.8520
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 2.436734
+    final residual ||A-Y||_F^2 : 0.709383
+    Frobenius distance ||A-Y||_F: 0.842249
+    2-norm distance   ||A-Y||_2 : 0.645647
+    normality ||AA*-A*A||_F     : 5.649e-16
+    normalized dist d_N/||A||_F : 0.4548
+    departure Delta_F/||A||_F   : 0.6719
+    iterations                  : 11
+    time (s)                    : 0.0237
+  Guglielmi-Scalone (total inner iterations: 874)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 0.709383
+    Frobenius distance ||A-Y||_F: 0.842249
+    2-norm distance   ||A-Y||_2 : 0.645651
+    normality ||AA*-A*A||_F     : 1.565e-07
+    normalized dist d_N/||A||_F : 0.4548
+    departure Delta_F/||A||_F   : 0.6719
+    iterations                  : 11
+    time (s)                    : 0.0295
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 3.090000
+    final residual ||A-Y||_F^2 : 0.709383
+    Frobenius distance ||A-Y||_F: 0.842249
+    2-norm distance   ||A-Y||_2 : 0.645647
+    normality ||AA*-A*A||_F     : 1.006e-15
+    normalized dist d_N/||A||_F : 0.4548
+    departure Delta_F/||A||_F   : 0.6719
+    sweeps                      : 14
+    time (s)                    : 0.0121
+
+ recovered normal matrix (ours):
+   0.5055 + 0.0000i  -0.8704 + 0.0000i   0.4862 - 0.0000i
+   0.9895 + 0.0000i   0.4729 - 0.0000i  -0.0064 + 0.0000i
+  -0.1220 - 0.0000i  -0.4707 - 0.0000i  -0.1784 - 0.0000i
+
+ recovered normal matrix (G&S):
+   0.5055 + 0.0000i  -0.8704 - 0.0000i   0.4862 + 0.0000i
+   0.9895 + 0.0000i   0.4729 - 0.0000i  -0.0063 + 0.0000i
+  -0.1220 - 0.0000i  -0.4707 + 0.0000i  -0.1784 - 0.0000i
+
+ recovered normal matrix (Ruhe):
+   0.5055 - 0.0000i  -0.8704 + 0.0000i   0.4862 - 0.0000i
+   0.9895 - 0.0000i   0.4729 + 0.0000i  -0.0064 - 0.0000i
+  -0.1220 + 0.0000i  -0.4707 - 0.0000i  -0.1784 + 0.0000i
+
+
+==================================================================
+Ruhe 2x2 / G&S Example 8   (m = 2)
+==================================================================
+nu(Y) = 3.8658,  ||Y||_F = 3.8544
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 11.058338
+    final residual ||A-Y||_F^2 : 1.932897
+    Frobenius distance ||A-Y||_F: 1.390287
+    2-norm distance   ||A-Y||_2 : 0.983081
+    normality ||AA*-A*A||_F     : 4.710e-16
+    normalized dist d_N/||A||_F : 0.3607
+    departure Delta_F/||A||_F   : 0.5101
+    iterations                  : 9
+    time (s)                    : 0.0243
+  Guglielmi-Scalone (total inner iterations: 318)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 1.932897
+    Frobenius distance ||A-Y||_F: 1.390287
+    2-norm distance   ||A-Y||_2 : 0.983081
+    normality ||AA*-A*A||_F     : 7.661e-07
+    normalized dist d_N/||A||_F : 0.3607
+    departure Delta_F/||A||_F   : 0.5101
+    iterations                  : 47
+    time (s)                    : 0.0115
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 11.993795
+    final residual ||A-Y||_F^2 : 1.932897
+    Frobenius distance ||A-Y||_F: 1.390287
+    2-norm distance   ||A-Y||_2 : 0.983081
+    normality ||AA*-A*A||_F     : 2.813e-15
+    normalized dist d_N/||A||_F : 0.3607
+    departure Delta_F/||A||_F   : 0.5101
+    sweeps                      : 2
+    time (s)                    : 0.0034
+
+ recovered normal matrix (ours):
+   1.1449 + 0.8324i  -2.0841 - 0.9957i
+  -1.0695 - 2.0473i  -0.1948 - 0.4603i
+
+ recovered normal matrix (G&S):
+   1.1449 + 0.8324i  -2.0841 - 0.9957i
+  -1.0695 - 2.0473i  -0.1948 - 0.4603i
+
+ recovered normal matrix (Ruhe):
+   1.1449 + 0.8324i  -2.0841 - 0.9957i
+  -1.0695 - 2.0473i  -0.1948 - 0.4603i
+
+
+==================================================================
+G&S Example 9   (m = 7)
+==================================================================
+nu(Y) = 991.3268,  ||Y||_F = 383.2506
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 135015.997503
+    final residual ||A-Y||_F^2 : 495.631486
+    Frobenius distance ||A-Y||_F: 22.262783
+    2-norm distance   ||A-Y||_2 : 12.813386
+    normality ||AA*-A*A||_F     : 2.185e-11
+    normalized dist d_N/||A||_F : 0.0581
+    departure Delta_F/||A||_F   : 0.0822
+    iterations                  : 19
+    time (s)                    : 0.0474
+  Guglielmi-Scalone (total inner iterations: 1055)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 495.631307
+    Frobenius distance ||A-Y||_F: 22.262778
+    2-norm distance   ||A-Y||_2 : 12.813453
+    normality ||AA*-A*A||_F     : 1.655e-03
+    normalized dist d_N/||A||_F : 0.0581
+    departure Delta_F/||A||_F   : 0.0822
+    iterations                  : 20
+    time (s)                    : 0.0451
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 141845.000000
+    final residual ||A-Y||_F^2 : 495.631486
+    Frobenius distance ||A-Y||_F: 22.262783
+    2-norm distance   ||A-Y||_2 : 12.813386
+    normality ||AA*-A*A||_F     : 4.606e-11
+    normalized dist d_N/||A||_F : 0.0581
+    departure Delta_F/||A||_F   : 0.0822
+    sweeps                      : 10
+    time (s)                    : 0.0024
+
+==================================================================
+Ruhe B7 (Gaussian)   (m = 7)
+==================================================================
+nu(Y) = 65.5133,  ||Y||_F = 11.4834
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 115.748850
+    final residual ||A-Y||_F^2 : 29.752140
+    Frobenius distance ||A-Y||_F: 5.454552
+    2-norm distance   ||A-Y||_2 : 3.458796
+    normality ||AA*-A*A||_F     : 3.775e-14
+    normalized dist d_N/||A||_F : 0.4750
+    departure Delta_F/||A||_F   : 0.7048
+    iterations                  : 15
+    time (s)                    : 0.0440
+  Guglielmi-Scalone (total inner iterations: 17562)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 29.752139
+    Frobenius distance ||A-Y||_F: 5.454552
+    2-norm distance   ||A-Y||_2 : 3.458783
+    normality ||AA*-A*A||_F     : 1.087e-06
+    normalized dist d_N/||A||_F : 0.4750
+    departure Delta_F/||A||_F   : 0.7048
+    iterations                  : 15
+    time (s)                    : 0.6795
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 108.824571
+    final residual ||A-Y||_F^2 : 29.752140
+    Frobenius distance ||A-Y||_F: 5.454552
+    2-norm distance   ||A-Y||_2 : 3.458796
+    normality ||AA*-A*A||_F     : 1.933e-13
+    normalized dist d_N/||A||_F : 0.4750
+    departure Delta_F/||A||_F   : 0.7048
+    sweeps                      : 123
+    time (s)                    : 0.0052
+
+==================================================================
+Ruhe J7 (Jordan block)   (m = 7)
+==================================================================
+nu(Y) = 6.0000,  ||Y||_F = 2.4495
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 5.123587
+    final residual ||A-Y||_F^2 : 0.857143
+    Frobenius distance ||A-Y||_F: 0.925820
+    2-norm distance   ||A-Y||_2 : 0.857143
+    normality ||AA*-A*A||_F     : 1.100e-15
+    normalized dist d_N/||A||_F : 0.3780
+    departure Delta_F/||A||_F   : 1.0000
+    iterations                  : 13
+    time (s)                    : 0.0269
+  Guglielmi-Scalone (total inner iterations: 1226)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 0.857143
+    Frobenius distance ||A-Y||_F: 0.925820
+    2-norm distance   ||A-Y||_2 : 0.857148
+    normality ||AA*-A*A||_F     : 2.693e-07
+    normalized dist d_N/||A||_F : 0.3780
+    departure Delta_F/||A||_F   : 1.0000
+    iterations                  : 21
+    time (s)                    : 0.0720
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 6.000000
+    final residual ||A-Y||_F^2 : 0.857143
+    Frobenius distance ||A-Y||_F: 0.925820
+    2-norm distance   ||A-Y||_2 : 0.857143
+    normality ||AA*-A*A||_F     : 2.779e-15
+    normalized dist d_N/||A||_F : 0.3780
+    departure Delta_F/||A||_F   : 1.0000
+    sweeps                      : 17
+    time (s)                    : 0.0109
+
+==================================================================
+Ruhe T7 (Nilpotent)   (m = 7)
+==================================================================
+nu(Y) = 37.7562,  ||Y||_F = 6.1446
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 34.456338
+    final residual ||A-Y||_F^2 : 12.943488
+    Frobenius distance ||A-Y||_F: 3.597706
+    2-norm distance   ||A-Y||_2 : 2.193805
+    normality ||AA*-A*A||_F     : 6.826e-15
+    normalized dist d_N/||A||_F : 0.5855
+    departure Delta_F/||A||_F   : 1.0000
+    iterations                  : 18
+    time (s)                    : 0.0467
+  Guglielmi-Scalone (total inner iterations: 35124)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 12.943487
+    Frobenius distance ||A-Y||_F: 3.597706
+    2-norm distance   ||A-Y||_2 : 2.193768
+    normality ||AA*-A*A||_F     : 6.986e-07
+    normalized dist d_N/||A||_F : 0.5855
+    departure Delta_F/||A||_F   : 1.0000
+    iterations                  : 14
+    time (s)                    : 1.3813
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 37.756248
+    final residual ||A-Y||_F^2 : 12.943488
+    Frobenius distance ||A-Y||_F: 3.597706
+    2-norm distance   ||A-Y||_2 : 2.193805
+    normality ||AA*-A*A||_F     : 5.358e-14
+    normalized dist d_N/||A||_F : 0.5855
+    departure Delta_F/||A||_F   : 1.0000
+    sweeps                      : 278
+    time (s)                    : 0.0117
+
+==================================================================
+Ruhe F12 (Frank)   (m = 12)
+==================================================================
+nu(Y) = 1210.0000,  ||Y||_F = 53.5910
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 2137.049238
+    final residual ||A-Y||_F^2 : 509.921825
+    Frobenius distance ||A-Y||_F: 22.581449
+    2-norm distance   ||A-Y||_2 : 16.254833
+    normality ||AA*-A*A||_F     : 4.838e-13
+    normalized dist d_N/||A||_F : 0.4214
+    departure Delta_F/||A||_F   : 0.6491
+    iterations                  : 36
+    time (s)                    : 0.2169
+  Guglielmi-Scalone (total inner iterations: 10745)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 509.921821
+    Frobenius distance ||A-Y||_F: 22.581449
+    2-norm distance   ||A-Y||_2 : 16.254818
+    normality ||AA*-A*A||_F     : 4.844e-06
+    normalized dist d_N/||A||_F : 0.4214
+    departure Delta_F/||A||_F   : 0.6491
+    iterations                  : 21
+    time (s)                    : 0.9630
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 2222.000000
+    final residual ||A-Y||_F^2 : 510.155064
+    Frobenius distance ||A-Y||_F: 22.586612
+    2-norm distance   ||A-Y||_2 : 16.256313
+    normality ||AA*-A*A||_F     : 5.465e-12
+    normalized dist d_N/||A||_F : 0.4215
+    departure Delta_F/||A||_F   : 0.6491
+    sweeps                      : 358
+    time (s)                    : 0.0330
+
+==================================================================
+Uniform complex   (m = 10)
+==================================================================
+nu(Y) = 8.5541,  ||Y||_F = 8.0488
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 57.130537
+    final residual ||A-Y||_F^2 : 4.201795
+    Frobenius distance ||A-Y||_F: 2.049828
+    2-norm distance   ||A-Y||_2 : 1.133615
+    normality ||AA*-A*A||_F     : 1.329e-14
+    normalized dist d_N/||A||_F : 0.2547
+    departure Delta_F/||A||_F   : 0.3634
+    iterations                  : 23
+    time (s)                    : 0.0881
+  Guglielmi-Scalone (total inner iterations: 3973)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 4.201793
+    Frobenius distance ||A-Y||_F: 2.049828
+    2-norm distance   ||A-Y||_2 : 1.133621
+    normality ||AA*-A*A||_F     : 2.811e-06
+    normalized dist d_N/||A||_F : 0.2547
+    departure Delta_F/||A||_F   : 0.3634
+    iterations                  : 25
+    time (s)                    : 0.2602
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 58.330681
+    final residual ||A-Y||_F^2 : 4.201795
+    Frobenius distance ||A-Y||_F: 2.049828
+    2-norm distance   ||A-Y||_2 : 1.133614
+    normality ||AA*-A*A||_F     : 3.751e-14
+    normalized dist d_N/||A||_F : 0.2547
+    departure Delta_F/||A||_F   : 0.3634
+    sweeps                      : 57
+    time (s)                    : 0.0044
+
+==================================================================
+Uniform complex   (m = 20)
+==================================================================
+nu(Y) = 34.8140,  ||Y||_F = 16.0564
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 238.228392
+    final residual ||A-Y||_F^2 : 16.302475
+    Frobenius distance ||A-Y||_F: 4.037632
+    2-norm distance   ||A-Y||_2 : 1.682896
+    normality ||AA*-A*A||_F     : 5.088e-14
+    normalized dist d_N/||A||_F : 0.2515
+    departure Delta_F/||A||_F   : 0.3675
+    iterations                  : 26
+    time (s)                    : 0.3184
+  Guglielmi-Scalone (total inner iterations: 13294)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 16.325091
+    Frobenius distance ||A-Y||_F: 4.040432
+    2-norm distance   ||A-Y||_2 : 1.710256
+    normality ||AA*-A*A||_F     : 2.545e-06
+    normalized dist d_N/||A||_F : 0.2516
+    departure Delta_F/||A||_F   : 0.3675
+    iterations                  : 28
+    time (s)                    : 3.2032
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 244.254632
+    final residual ||A-Y||_F^2 : 16.325092
+    Frobenius distance ||A-Y||_F: 4.040432
+    2-norm distance   ||A-Y||_2 : 1.710219
+    normality ||AA*-A*A||_F     : 4.787e-13
+    normalized dist d_N/||A||_F : 0.2516
+    departure Delta_F/||A||_F   : 0.3675
+    sweeps                      : 380
+    time (s)                    : 0.1085
+
+==================================================================
+Uniform complex   (m = 50)
+==================================================================
+nu(Y) = 206.9459,  ||Y||_F = 40.9653
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 1627.134116
+    final residual ||A-Y||_F^2 : 97.699658
+    Frobenius distance ||A-Y||_F: 9.884314
+    2-norm distance   ||A-Y||_2 : 2.895542
+    normality ||AA*-A*A||_F     : 4.261e-13
+    normalized dist d_N/||A||_F : 0.2413
+    departure Delta_F/||A||_F   : 0.3512
+    iterations                  : 30
+    time (s)                    : 1.2518
+  Guglielmi-Scalone (total inner iterations: 13084)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 97.591314
+    Frobenius distance ||A-Y||_F: 9.878832
+    2-norm distance   ||A-Y||_2 : 2.874647
+    normality ||AA*-A*A||_F     : 2.291e-05
+    normalized dist d_N/||A||_F : 0.2412
+    departure Delta_F/||A||_F   : 0.3512
+    iterations                  : 35
+    time (s)                    : 25.4109
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 1646.805184
+    final residual ||A-Y||_F^2 : 97.693201
+    Frobenius distance ||A-Y||_F: 9.883987
+    2-norm distance   ||A-Y||_2 : 2.900511
+    normality ||AA*-A*A||_F     : 1.704e-11
+    normalized dist d_N/||A||_F : 0.2413
+    departure Delta_F/||A||_F   : 0.3512
+    sweeps                      : 1033
+    time (s)                    : 2.7571
+
+==================================================================
+Uniform complex   (m = 100)
+==================================================================
+nu(Y) = 835.3566,  ||Y||_F = 81.5535
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 6518.313307
+    final residual ||A-Y||_F^2 : 389.360725
+    Frobenius distance ||A-Y||_F: 19.732226
+    2-norm distance   ||A-Y||_2 : 3.913040
+    normality ||AA*-A*A||_F     : 2.156e-12
+    normalized dist d_N/||A||_F : 0.2420
+    departure Delta_F/||A||_F   : 0.3544
+    iterations                  : 95
+    time (s)                    : 18.2450
+  Guglielmi-Scalone (total inner iterations: 50876)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 389.585679
+    Frobenius distance ||A-Y||_F: 19.737925
+    2-norm distance   ||A-Y||_2 : 3.939585
+    normality ||AA*-A*A||_F     : 6.560e-06
+    normalized dist d_N/||A||_F : 0.2420
+    departure Delta_F/||A||_F   : 0.3544
+    iterations                  : 16
+    time (s)                    : 532.0665
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 6578.722158
+    final residual ||A-Y||_F^2 : 389.504490
+    Frobenius distance ||A-Y||_F: 19.735868
+    2-norm distance   ||A-Y||_2 : 3.941317
+    normality ||AA*-A*A||_F     : 1.590e-10
+    normalized dist d_N/||A||_F : 0.2420
+    departure Delta_F/||A||_F   : 0.3544
+    sweeps                      : 2034
+    time (s)                    : 33.0545
+
+==================================================================
+Uniform complex   (m = 200)
+==================================================================
+nu(Y) = 3353.1538,  ||Y||_F = 163.3172
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 26445.323817
+    final residual ||A-Y||_F^2 : 1560.426067
+    Frobenius distance ||A-Y||_F: 39.502229
+    2-norm distance   ||A-Y||_2 : 5.685151
+    normality ||AA*-A*A||_F     : 1.160e-11
+    normalized dist d_N/||A||_F : 0.2419
+    departure Delta_F/||A||_F   : 0.3546
+    iterations                  : 135
+    time (s)                    : 61.6145
+  Guglielmi-Scalone (total inner iterations: 49319)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 1560.821194
+    Frobenius distance ||A-Y||_F: 39.507230
+    2-norm distance   ||A-Y||_2 : 5.680318
+    normality ||AA*-A*A||_F     : 2.557e-06
+    normalized dist d_N/||A||_F : 0.2419
+    departure Delta_F/||A||_F   : 0.3546
+    iterations                  : 15
+    time (s)                    : 2600.3700
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 26539.916980
+    final residual ||A-Y||_F^2 : 1560.412410
+    Frobenius distance ||A-Y||_F: 39.502056
+    2-norm distance   ||A-Y||_2 : 5.682980
+    normality ||AA*-A*A||_F     : 9.496e-10
+    normalized dist d_N/||A||_F : 0.2419
+    departure Delta_F/||A||_F   : 0.3546
+    sweeps                      : 2254
+    time (s)                    : 255.2240
+
+==================================================================
+Uniform complex   (m = 250)
+==================================================================
+nu(Y) = 5238.6771,  ||Y||_F = 204.3238
+
+  Ours (NPP, random start)
+    initial residual ||A-Y||_F^2: 41423.828277
+    final residual ||A-Y||_F^2 : 2428.282976
+    Frobenius distance ||A-Y||_F: 49.277611
+    2-norm distance   ||A-Y||_2 : 6.350897
+    normality ||AA*-A*A||_F     : 1.831e-11
+    normalized dist d_N/||A||_F : 0.2412
+    departure Delta_F/||A||_F   : 0.3542
+    iterations                  : 193
+    time (s)                    : 351.5715
+  Guglielmi-Scalone (total inner iterations: 68833)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 2428.890554
+    Frobenius distance ||A-Y||_F: 49.283776
+    2-norm distance   ||A-Y||_2 : 6.387645
+    normality ||AA*-A*A||_F     : 9.083e-05
+    normalized dist d_N/||A||_F : 0.2412
+    departure Delta_F/||A||_F   : 0.3542
+    iterations                  : 30
+    time (s)                    : 5289.5834
+
+  Ruhe (Algorithm J)
+    initial residual ||A-Y||_F^2: 41565.145067
+    final residual ||A-Y||_F^2 : 2428.564551
+    Frobenius distance ||A-Y||_F: 49.280468
+    2-norm distance   ||A-Y||_2 : 6.363617
+    normality ||AA*-A*A||_F     : 8.967e-09
+    normalized dist d_N/||A||_F : 0.2412
+    departure Delta_F/||A||_F   : 0.3542
+    sweeps                      : 6516
+    time (s)                    : 1387.0022
+
+realGradientCheck
+(m,n) = (50,50): slope = 2.00010
+(m,n) = (50,40): slope = 2.00005
+(m,n) = (50,25): slope = 2.00034
+(m,n) = (50,10): slope = 1.99991
+
+realHessianCheck
+# Hessian check
+The slope should be 3. It appears to be: 3.00022.
+If it is far from 3, then the gradient or the Hessian might be erroneous.
+Hess f(x)[d] must be a tangent vector at x.
+If so, the following number is zero up to machine precision: 1.5777e-14.
+If it is far from 0, the Hessian returns non-tangent vectors.
+The Hessian at x must be linear on the tangent space at x.
+If so, ||a*H[d1] + b*H[d2] - H[a*d1+b*d2]|| is zero up to machine precision.
+	Value: 3.54539e-14 (norm of H[a*d1+b*d2]: 51.9438)
+If it is far from 0, then the Hessian is not linear.
+The Hessian at x must be symmetric on the tangent space at x.
+If so, <d1, H[d2]> - <H[d1], d2> is zero up to machine precision.
+	Value: -0.141131 - -0.141131 = 4.44089e-16.
+If it is far from 0, then the Hessian is not symmetric.
+# Hessian check
+The slope should be 3. It appears to be: 2.99527.
+If it is far from 3, then the gradient or the Hessian might be erroneous.
+Hess f(x)[d] must be a tangent vector at x.
+If so, the following number is zero up to machine precision: 1.6422e-14.
+If it is far from 0, the Hessian returns non-tangent vectors.
+The Hessian at x must be linear on the tangent space at x.
+If so, ||a*H[d1] + b*H[d2] - H[a*d1+b*d2]|| is zero up to machine precision.
+	Value: 4.93068e-14 (norm of H[a*d1+b*d2]: 75.09)
+If it is far from 0, then the Hessian is not linear.
+The Hessian at x must be symmetric on the tangent space at x.
+If so, <d1, H[d2]> - <H[d1], d2> is zero up to machine precision.
+	Value: 0.0769517 - 0.0769517 = -2.77556e-16.
+If it is far from 0, then the Hessian is not symmetric.
+# Hessian check
+The slope should be 3. It appears to be: 2.99928.
+If it is far from 3, then the gradient or the Hessian might be erroneous.
+Hess f(x)[d] must be a tangent vector at x.
+If so, the following number is zero up to machine precision: 1.60412e-14.
+If it is far from 0, the Hessian returns non-tangent vectors.
+The Hessian at x must be linear on the tangent space at x.
+If so, ||a*H[d1] + b*H[d2] - H[a*d1+b*d2]|| is zero up to machine precision.
+	Value: 1.47295e-14 (norm of H[a*d1+b*d2]: 24.9186)
+If it is far from 0, then the Hessian is not linear.
+The Hessian at x must be symmetric on the tangent space at x.
+If so, <d1, H[d2]> - <H[d1], d2> is zero up to machine precision.
+	Value: 0.401096 - 0.401096 = -1.11022e-15.
+If it is far from 0, then the Hessian is not symmetric.
+# Hessian check
+The slope should be 3. It appears to be: 3.01447.
+If it is far from 3, then the gradient or the Hessian might be erroneous.
+Hess f(x)[d] must be a tangent vector at x.
+If so, the following number is zero up to machine precision: 2.00092e-14.
+If it is far from 0, the Hessian returns non-tangent vectors.
+The Hessian at x must be linear on the tangent space at x.
+If so, ||a*H[d1] + b*H[d2] - H[a*d1+b*d2]|| is zero up to machine precision.
+	Value: 8.24108e-15 (norm of H[a*d1+b*d2]: 12.5865)
+If it is far from 0, then the Hessian is not linear.
+The Hessian at x must be symmetric on the tangent space at x.
+If so, <d1, H[d2]> - <H[d1], d2> is zero up to machine precision.
+	Value: -0.0334943 - -0.0334943 = -1.52656e-16.
+If it is far from 0, then the Hessian is not symmetric.
+
+realKnownMin
+m    n    | init(r1)    init(r2)    | res(r1)     res(r2)     | time(r1)    time(r2)    | dA(r1)      dA(r2)      | relA(r1)%   relA(r2)%   | res spread 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+10   2    | 5.971e-01   2.196e-01   | 9.932e-14   3.661e-02   | 0.232       0.041       | 425.4222    6.6375      | 21407.3207  333.9980    | 3.661e-02  
+10   5    | 3.162e+00   1.847e+00   | 4.951e-12   7.291e-12   | 0.379       0.224       | 1.7148      2.6185      | 83.4384     127.4105    | 2.339e-12  
+10   8    | 3.499e+00   4.485e+00   | 5.730e-02   1.816e-02   | 0.290       0.107       | 1.9268      1.7437      | 89.3799     80.8883     | 3.913e-02  
+10   10   | 8.377e+00   1.761e+01   | 4.839e-13   1.672e-15   | 0.132       0.093       | 0.0000      0.0000      | 0.0001      0.0000      | 4.822e-13  
+20   4    | 2.715e+00   2.136e+00   | 1.465e-18   2.723e-21   | 0.221       0.109       | 35.1270     4.1737      | 1244.4476   147.8631    | 1.462e-18  
+20   10   | 5.914e+00   4.797e+00   | 2.462e-09   1.156e-08   | 11.241      21.149      | 2.2641      1.5149      | 81.3189     54.4110     | 9.100e-09  
+20   16   | 2.167e+01   2.851e+01   | 5.544e-03   5.172e-02   | 0.988       0.610       | 0.2266      1.5516      | 6.8535      46.9296     | 4.618e-02  
+20   20   | 1.877e+01   2.432e+01   | 4.710e-12   7.973e-12   | 1.834       2.192       | 0.0000      0.0000      | 0.0002      0.0005      | 3.264e-12  
+50   10   | 4.830e+01   4.274e+01   | 1.991e-19   2.171e-16   | 0.380       0.308       | 6.4466      6.7607      | 130.0948    136.4349    | 2.169e-16  
+50   25   | 1.171e+02   1.217e+02   | 9.076e-10   3.603e-09   | 245.955     482.467     | 4.7042      5.3263      | 91.2731     103.3425    | 2.696e-09  
+50   40   | 1.380e+02   1.218e+02   | 1.048e-01   2.584e-02   | 71.870      94.346      | 0.4359      0.2308      | 9.7685      5.1734      | 7.893e-02  
+50   50   | 1.948e+02   1.701e+02   | 1.657e-01   7.690e-01   | 38.519      28.876      | 0.4855      0.7722      | 8.7581      13.9312     | 6.033e-01  
+
+realcnp_comparison
+
+==================================================================
+G&S Example 1   (m = 3)
+==================================================================
+nu(Y) = 1.5485,  ||Y||_F = 1.8520
+
+  Ours (real NPP, random start)
+    initial residual ||A-Y||_F^2: 0.775972
+    final residual ||A-Y||_F^2 : 0.709383
+    Frobenius distance ||A-Y||_F: 0.842249
+    2-norm distance   ||A-Y||_2 : 0.645647
+    normality ||AA^T-A^TA||_F   : 1.025e-15
+    normalized dist d_N/||A||_F : 0.4548
+    departure Delta_F/||A||_F   : 0.6719
+    iterations                  : 3
+    time (s)                    : 0.0194
+  Guglielmi-Scalone (total inner iterations: 862)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 0.709383
+    Frobenius distance ||A-Y||_F: 0.842249
+    2-norm distance   ||A-Y||_2 : 0.645651
+    normality ||AA^T-A^TA||_F   : 1.565e-07
+    normalized dist d_N/||A||_F : 0.4548
+    departure Delta_F/||A||_F   : 0.6719
+    iterations                  : 9
+    time (s)                    : 0.0306
+
+ recovered normal matrix (ours):
+    0.5055   -0.8704    0.4862
+    0.9895    0.4729   -0.0064
+   -0.1220   -0.4707   -0.1784
+
+ recovered normal matrix (G&S):
+    0.5055   -0.8704    0.4862
+    0.9895    0.4729   -0.0063
+   -0.1220   -0.4707   -0.1784
+
+
+==================================================================
+Ruhe B7 (Gaussian)   (m = 7)
+==================================================================
+nu(Y) = 38.7493,  ||Y||_F = 8.9949
+
+  Ours (real NPP, random start)
+    initial residual ||A-Y||_F^2: 76.324254
+    final residual ||A-Y||_F^2 : 20.793533
+    Frobenius distance ||A-Y||_F: 4.559993
+    2-norm distance   ||A-Y||_2 : 2.804095
+    normality ||AA^T-A^TA||_F   : 5.199e-15
+    normalized dist d_N/||A||_F : 0.5070
+    departure Delta_F/||A||_F   : 0.6920
+    iterations                  : 13
+    time (s)                    : 0.0462
+  Guglielmi-Scalone (total inner iterations: 1398)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 20.072808
+    Frobenius distance ||A-Y||_F: 4.480269
+    2-norm distance   ||A-Y||_2 : 2.884637
+    normality ||AA^T-A^TA||_F   : 1.386e-06
+    normalized dist d_N/||A||_F : 0.4981
+    departure Delta_F/||A||_F   : 0.6920
+    iterations                  : 20
+    time (s)                    : 0.0682
+
+==================================================================
+Ruhe J7 (Jordan block)   (m = 7)
+==================================================================
+nu(Y) = 6.0000,  ||Y||_F = 2.4495
+
+  Ours (real NPP, random start)
+    initial residual ||A-Y||_F^2: 5.534136
+    final residual ||A-Y||_F^2 : 1.040787
+    Frobenius distance ||A-Y||_F: 1.020190
+    2-norm distance   ||A-Y||_2 : 0.847999
+    normality ||AA^T-A^TA||_F   : 1.275e-15
+    normalized dist d_N/||A||_F : 0.4165
+    departure Delta_F/||A||_F   : 1.0000
+    iterations                  : 20
+    time (s)                    : 0.0345
+  Guglielmi-Scalone (total inner iterations: 1216)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 0.857143
+    Frobenius distance ||A-Y||_F: 0.925820
+    2-norm distance   ||A-Y||_2 : 0.857147
+    normality ||AA^T-A^TA||_F   : 2.693e-07
+    normalized dist d_N/||A||_F : 0.3780
+    departure Delta_F/||A||_F   : 1.0000
+    iterations                  : 21
+    time (s)                    : 0.0780
+
+==================================================================
+Ruhe T7 (Nilpotent)   (m = 7)
+==================================================================
+nu(Y) = 17.1264,  ||Y||_F = 4.1384
+
+  Ours (real NPP, random start)
+    initial residual ||A-Y||_F^2: 15.498333
+    final residual ||A-Y||_F^2 : 7.210686
+    Frobenius distance ||A-Y||_F: 2.685272
+    2-norm distance   ||A-Y||_2 : 1.731936
+    normality ||AA^T-A^TA||_F   : 3.093e-15
+    normalized dist d_N/||A||_F : 0.6489
+    departure Delta_F/||A||_F   : 1.0000
+    iterations                  : 13
+    time (s)                    : 0.0409
+  Guglielmi-Scalone (total inner iterations: 6448)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 6.918166
+    Frobenius distance ||A-Y||_F: 2.630241
+    2-norm distance   ||A-Y||_2 : 1.628552
+    normality ||AA^T-A^TA||_F   : 3.796e-07
+    normalized dist d_N/||A||_F : 0.6356
+    departure Delta_F/||A||_F   : 1.0000
+    iterations                  : 12
+    time (s)                    : 0.3372
+
+==================================================================
+Ruhe F12 (Frank)   (m = 12)
+==================================================================
+nu(Y) = 1210.0000,  ||Y||_F = 53.5910
+
+  Ours (real NPP, random start)
+    initial residual ||A-Y||_F^2: 2027.883956
+    final residual ||A-Y||_F^2 : 509.921825
+    Frobenius distance ||A-Y||_F: 22.581449
+    2-norm distance   ||A-Y||_2 : 16.254833
+    normality ||AA^T-A^TA||_F   : 3.123e-13
+    normalized dist d_N/||A||_F : 0.4214
+    departure Delta_F/||A||_F   : 0.6491
+    iterations                  : 31
+    time (s)                    : 0.1668
+  Guglielmi-Scalone (total inner iterations: 6548)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 582.681309
+    Frobenius distance ||A-Y||_F: 24.138793
+    2-norm distance   ||A-Y||_2 : 16.504676
+    normality ||AA^T-A^TA||_F   : 3.453e-05
+    normalized dist d_N/||A||_F : 0.4504
+    departure Delta_F/||A||_F   : 0.6491
+    iterations                  : 29
+    time (s)                    : 0.7787
+
+==================================================================
+Uniform real   (m = 10)
+==================================================================
+nu(Y) = 5.1756,  ||Y||_F = 5.4443
+
+  Ours (real NPP, random start)
+    initial residual ||A-Y||_F^2: 23.738944
+    final residual ||A-Y||_F^2 : 2.433110
+    Frobenius distance ||A-Y||_F: 1.559843
+    2-norm distance   ||A-Y||_2 : 0.776558
+    normality ||AA^T-A^TA||_F   : 3.248e-15
+    normalized dist d_N/||A||_F : 0.2865
+    departure Delta_F/||A||_F   : 0.4179
+    iterations                  : 18
+    time (s)                    : 0.0554
+  Guglielmi-Scalone (total inner iterations: 1610)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 2.433110
+    Frobenius distance ||A-Y||_F: 1.559843
+    2-norm distance   ||A-Y||_2 : 0.776549
+    normality ||AA^T-A^TA||_F   : 3.074e-07
+    normalized dist d_N/||A||_F : 0.2865
+    departure Delta_F/||A||_F   : 0.4179
+    iterations                  : 12
+    time (s)                    : 0.1340
+
+==================================================================
+Uniform real   (m = 20)
+==================================================================
+nu(Y) = 14.9886,  ||Y||_F = 11.3087
+
+  Ours (real NPP, random start)
+    initial residual ||A-Y||_F^2: 110.734323
+    final residual ||A-Y||_F^2 : 8.472820
+    Frobenius distance ||A-Y||_F: 2.910811
+    2-norm distance   ||A-Y||_2 : 1.180198
+    normality ||AA^T-A^TA||_F   : 2.146e-14
+    normalized dist d_N/||A||_F : 0.2574
+    departure Delta_F/||A||_F   : 0.3423
+    iterations                  : 32
+    time (s)                    : 0.2409
+  Guglielmi-Scalone (total inner iterations: 5564)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 7.081820
+    Frobenius distance ||A-Y||_F: 2.661169
+    2-norm distance   ||A-Y||_2 : 1.159009
+    normality ||AA^T-A^TA||_F   : 2.340e-06
+    normalized dist d_N/||A||_F : 0.2353
+    departure Delta_F/||A||_F   : 0.3423
+    iterations                  : 30
+    time (s)                    : 1.4665
+
+==================================================================
+Uniform real   (m = 50)
+==================================================================
+nu(Y) = 105.9844,  ||Y||_F = 29.0374
+
+  Ours (real NPP, random start)
+    initial residual ||A-Y||_F^2: 800.125330
+    final residual ||A-Y||_F^2 : 55.806321
+    Frobenius distance ||A-Y||_F: 7.470363
+    2-norm distance   ||A-Y||_2 : 2.059980
+    normality ||AA^T-A^TA||_F   : 1.900e-13
+    normalized dist d_N/||A||_F : 0.2573
+    departure Delta_F/||A||_F   : 0.3545
+    iterations                  : 55
+    time (s)                    : 2.0577
+  Guglielmi-Scalone (total inner iterations: 29153)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 50.360077
+    Frobenius distance ||A-Y||_F: 7.096483
+    2-norm distance   ||A-Y||_2 : 1.965305
+    normality ||AA^T-A^TA||_F   : 6.341e-06
+    normalized dist d_N/||A||_F : 0.2444
+    departure Delta_F/||A||_F   : 0.3545
+    iterations                  : 40
+    time (s)                    : 48.6675
+
+==================================================================
+Uniform real   (m = 100)
+==================================================================
+nu(Y) = 424.7323,  ||Y||_F = 57.5766
+
+  Ours (real NPP, random start)
+    initial residual ||A-Y||_F^2: 3232.917889
+    final residual ||A-Y||_F^2 : 216.913463
+    Frobenius distance ||A-Y||_F: 14.727982
+    2-norm distance   ||A-Y||_2 : 2.934339
+    normality ||AA^T-A^TA||_F   : 1.017e-12
+    normalized dist d_N/||A||_F : 0.2558
+    departure Delta_F/||A||_F   : 0.3579
+    iterations                  : 57
+    time (s)                    : 9.7944
+  Guglielmi-Scalone (total inner iterations: 32015)
+
+  Guglielmi-Scalone
+    initial residual ||A-Y||_F^2: 0.010000
+    final residual ||A-Y||_F^2 : 197.108263
+    Frobenius distance ||A-Y||_F: 14.039525
+    2-norm distance   ||A-Y||_2 : 2.906244
+    normality ||AA^T-A^TA||_F   : 2.019e-05
+    normalized dist d_N/||A||_F : 0.2438
+    departure Delta_F/||A||_F   : 0.3579
+    iterations                  : 35
+    time (s)                    : 234.0993
